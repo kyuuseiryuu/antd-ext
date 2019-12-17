@@ -1,0 +1,48 @@
+---
+name: EnumSelect
+---
+
+import { Playground, Props } from 'docz';
+import { Form } from 'antd';
+import { EnumSelect } from '../index';
+import { TypeDemoEnum1, TypeDemoEnum2 } from './utils/types';
+
+# EnumSelect
+
+## Demo
+
+打开控制台看打印的 value
+
+```typescript
+enum TypeDemoEnum1 {
+  Good,
+  Bad,
+}
+
+enum TypeDemoEnum2 {
+  Good = 'GOOD',
+  Bad = 'BAD',
+}
+```
+<Playground>
+  <Form layout={'horizontal'} labelCol={{ span: 6 }} wrapperCol={{ span: 18 }}>
+    <Form.Item label={'TypeDemoEnum1'}>
+      <EnumSelect enumerator={TypeDemoEnum1} onChange={v => console.log(v)} />
+    </Form.Item>
+    <Form.Item label={'TypeDemoEnum2'}>
+      <EnumSelect enumerator={TypeDemoEnum2} onChange={v => console.log(v)} />
+    </Form.Item>
+    <Form.Item label={'name as value'}>
+      <EnumSelect nameAsValue enumerator={TypeDemoEnum2} onChange={v => console.log(v)} />
+    </Form.Item>
+  </Form>
+</Playground>
+
+## Properties
+
+在 Select 组件之上额外拓展两个属性
+
+| 属性 | 说明 | type |
+| :--- | :--- | :--- |
+| enumerator | typescript 的枚举类型 | enum |
+| nameAsValue | 将枚举项的 name 作为值 | boolean |

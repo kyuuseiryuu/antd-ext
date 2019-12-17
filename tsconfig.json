@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "skipDefaultLibCheck": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "removeComments": true
+  }
+}

@@ -1,0 +1,6 @@
+.docz
+.idea
+/src
+.fatherrc.js
+tsconfig.json
+yarn-error.log
