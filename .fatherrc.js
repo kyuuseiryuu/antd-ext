@@ -10,4 +10,8 @@ export default {
       style: true,
     }],
   ],
+  doc: {
+    typescript: true,
+    base: '/antd-ext',
+  },
 };

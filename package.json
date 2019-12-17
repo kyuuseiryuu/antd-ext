@@ -1,17 +1,18 @@
 {
   "name": "antd-ext",
   "version": "1.0.0",
-  "description": "",
+  "description": "antd business component extension",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "yarn father doc dev",
-    "build": "rimraf dist/* && yarn father build"
+    "build": "rimraf dist/* && yarn father build",
+    "dep": "father doc build && gh-pages -d .doc"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "kyuuseiryuu",
+  "license": "MIT",
   "peerDependencies": {
     "antd": "^3.26.3",
     "react": "^16.12.0"
