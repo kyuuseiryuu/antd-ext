@@ -23,5 +23,13 @@
     "gh-pages": "^2.1.1",
     "rimraf": "^3.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyuuseiryuu/antd-ext.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kyuuseiryuu/antd-ext/issues"
+  },
+  "homepage": "https://github.com/kyuuseiryuu/antd-ext#readme"
 }
