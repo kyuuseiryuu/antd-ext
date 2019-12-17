@@ -19,6 +19,7 @@
   "devDependencies": {
     "babel-plugin-import": "^1.13.0",
     "father": "^2.29.1",
+    "gh-pages": "^2.1.1",
     "rimraf": "^3.0.0"
   },
   "dependencies": {}
