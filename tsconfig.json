@@ -10,8 +10,7 @@
     "removeComments": true
   },
   "exclude": [
-    "demo/**/*",
-    "**/exclude/**/*"
+    "**/__demo__/**/*"
   ],
   "include": [
     "src/**/*"
