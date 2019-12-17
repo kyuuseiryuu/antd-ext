@@ -1,0 +1,65 @@
+---
+name: AdvancedForm
+---
+
+import {Form, Input} from 'antd';
+import {Playground, Props} from 'docz';
+import { AdvancedForm } from './AdvancedForm';
+import AdvancedFormDemo from '../../demo/AdvancedFormDemo';
+
+## Demo
+
+<Playground>
+  <AdvancedFormDemo />
+</Playground>
+
+```tsx
+import React from 'react';
+import {AdvancedForm} from "../src";
+import {Form, Input} from "antd";
+import {WrappedFormUtils} from "antd/es/form/Form";
+
+type Props = {
+  form: WrappedFormUtils;
+};
+
+const AdvancedFormDemo: React.FC<Props> = props => {
+  return (
+    <div>
+      <AdvancedForm
+        form={props.form}
+        fields={[
+          { id: 'aaa', label: 'aaa', node: <Input /> },
+          { id: 'bbb', label: 'bbb', node: <Input />, options: { rules: [{ required: true }] } },
+          { id: 'ccc', label: 'ccc', node: <Input /> },
+        ]}
+        formProps={{
+          layout: 'inline',
+        }}
+      />
+    </div>
+  );
+};
+
+export default Form.create<Props>()(AdvancedFormDemo);
+
+```
+
+## Properties
+
+| 属性 | 说明 | 类型 |
+| :--- | :--- | :--- |
+| form | rc-form | WrappedFormUtils |
+| fields | 表单定义数组 |  Field[] |
+| formProps | antd Form 组件的 props | FormProps |
+
+### Field
+```typescript
+export interface Field {
+  id: string;
+  label: React.ReactNode;
+  node: React.ReactNode;
+  options?: GetFieldDecoratorOptions;
+  formItemProps?: FormItemProps;
+}
+```
