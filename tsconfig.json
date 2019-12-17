@@ -8,5 +8,12 @@
     "sourceMap": true,
     "jsx": "react",
     "removeComments": true
-  }
+  },
+  "exclude": [
+    "demo/**/*",
+    "**/exclude/**/*"
+  ],
+  "include": [
+    "src/**/*"
+  ]
 }
