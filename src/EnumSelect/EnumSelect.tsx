@@ -13,7 +13,7 @@ export const EnumSelect: React.FC<Props> = forwardRef(props => {
   if (keys.length % 2 === 1) {
     keys.pop();
   }
-  const labels = keys.includes('0') ? keys.slice(keys.length / 2) : keys;
+  const labels = !isNaN(Number(keys[0])) ? keys.slice(keys.length / 2) : keys;
   return (
     <Select {...selectProps}>
       {labels.map((label, index) => (
